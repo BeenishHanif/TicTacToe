@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: linear-gradient(to top left, #17031b, #070725);
+}
+
+body {
+  background: var(--bg-color);
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+.container {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-color);
+  height: 490px;
+  width: 490px;
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  outline: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px #48abe0, 0 0 20px 7px #ebecca, 0 0 25px 20px #8a2be2,
+    0 0 20px 20px #ff1493;
+  padding: 10px;
+}
+
+.box {
+  border: 3px ridge purple;
+  color: white;
+  text-shadow: 0 0 13px #c6bf43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-attachment: fixed;
+}
+.box:nth-child(1) {
+  border-top: none;
+  border-left: none;
+}
+.box:nth-child(4) {
+  border-left: none;
+}
+.box:nth-child(7) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.box:nth-child(2) {
+  border-top: none;
+}
+.box:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+.box:nth-child(8) {
+  border-bottom: none;
+}
+.box:nth-child(9) {
+  border-right: none;
+  border-bottom: none;
+}
+.box:nth-child(6) {
+  border-right: none;
+}
+
+.button {
+  transform: translate(-50%, -2%);
+  position: relative;
+  top: 10%;
+  left: 20%;
+  padding: 2px;
+  background-color: var(--bg-color);
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: #ebecca;
+  color: rgb(24, 5, 24);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.winBox {
+  background-color: var(--bg-color);
+  height: 200px;
+  width: 300px;
+  border: 5px solid white;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 13px #c6bf43;
+  font-size: 2em;
+  background: var(--bg-color);
+  flex-direction: column;
+}
